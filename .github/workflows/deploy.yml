@@ -33,7 +33,7 @@ jobs:
           # Public values only. The service_role key must never be added here.
           VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
-          VITE_LOGIN_DOMAIN: ${{ vars.VITE_LOGIN_DOMAIN }}
+          VITE_LOGIN_DOMAIN: ${{ secrets.VITE_LOGIN_DOMAIN }}
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: dist
