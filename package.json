@@ -1,0 +1,39 @@
+{
+  "name": "village-pit-control",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "vite --port 4173",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173",
+    "create-user": "tsx scripts/create-user.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "format": "prettier --write src shared scripts tests supabase *.json *.ts *.html *.md",
+    "format:check": "prettier --check src shared scripts tests supabase *.json *.ts *.html *.md",
+    "check": "npm run build && npm test",
+    "audit:deps": "npm audit --omit=dev"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
+    "@zxing/browser": "^0.1.5",
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "@types/node": "^22.18.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "prettier": "^3.9.9",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12"
+  }
+}
